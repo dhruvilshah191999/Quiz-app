@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Quiz Mania</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div id="main-header">
+        <div id="quiz-image">
+          <img src="./QUIZMania.svg" alt="QUIZ" />
+        </div>
+        <div id="exit-button">
+          <button onclick="exitQuiz()">Exit Quiz</button>
+        </div>
+      </div>
+    </header>
+
+    <div id="main-lading-page">
+      <h1>
+        Welcome to <span id="quiz">Quiz</span><span id="mania">Mania</span>
+      </h1>
+      <div id="rules">
+        <p>Please read all the rules about this quiz before you start.</p>
+        <p id="openModal">Quiz rules</p>
+      </div>
+      <div id="basic-form">
+        <div class="input-container">
+          <label for="fullname">Full name</label>
+          <input
+            type="text"
+            id="fullname"
+            placeholder="Full name"
+            onchange="handleChange()"
+          />
+        </div>
+        <div class="radio-container">
+          <label for="fullname">Please select topic to continue</label>
+          <div class="options">
+            <label id="options_Javascript_Basic" class="custom-radio">
+              <div>
+                <input
+                  type="radio"
+                  name="option"
+                  value="Javascript_Basic"
+                  onchange="radioChanged(this.value)"
+                />
+                <span class="checkmark"></span>
+              </div>
+              <p>Javascript Basic</p>
+            </label>
+            <label id="options_Angular_Basic" class="custom-radio">
+              <input
+                type="radio"
+                name="option"
+                value="Angular_Basic"
+                onchange="radioChanged(this.value)"
+              />
+              <span class="checkmark"></span>
+              <p>Angular Basic</p>
+            </label>
+            <label id="options_ReactJs_Advance" class="custom-radio">
+              <input
+                type="radio"
+                name="option"
+                value="ReactJs_Advance"
+                onchange="radioChanged(this.value)"
+              />
+              <span class="checkmark"></span>
+              <p>React Js Advance</p>
+            </label>
+            <label id="options_Flutter" class="custom-radio">
+              <input
+                type="radio"
+                name="option"
+                value="Flutter"
+                onchange="radioChanged(this.value)"
+              />
+              <span class="checkmark"></span>
+              <p>Flutter</p>
+            </label>
+          </div>
+        </div>
+        <div class="submit-button">
+          <button id="start-quiz" onclick="startQuiz()">Start Quiz</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="quiz-started">
+      <div id="question-count">
+        <div id="question-number">
+          <p id="count"></p>
+        </div>
+        <div id="timer">
+          <p id="counter"></p>
+        </div>
+      </div>
+      <div class="progress-bar">
+        <div id="progress" class="progress"></div>
+            
+      </div>
+      <div id="question_section">
+        <div id="question_with_index">
+          <div id="question_index">1</div>
+          <p id="question"></p>
+        </div>
+        <div class="options options-list" id="options-list"></div>
+        <div class="button-group">
+          <div class="submit-button">
+            <button id="next-question" onclick="next()">Next</button>
+          </div>
+          <div>
+            <p onclick="next()">Skip this question</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="result-section">
+      <div id="result"></div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
