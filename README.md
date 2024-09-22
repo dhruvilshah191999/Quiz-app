@@ -1,6 +1,6 @@
-# Simple HTML, CSS, and JavaScript Application
+# Quiz Maina Application
 
-This is a basic project that demonstrates a simple HTML page styled with CSS and interactive elements powered by JavaScript. 
+Created a Quiz Application where users can select a category, answer multiple-choice questions with a timer, and receive a final score based on their correct answers. The code should be clean, maintainable, and follow best practices.
 
 ## Prerequisites
 
